@@ -10,11 +10,6 @@ int main(int argc, char **argv) {
     if (!yyin) {
         return -1;
     } else {
-        try {
-            yyparse();
-        } catch (std::exception &e) {
-            return -2;
-        }
-        return 0;
+        return yyparse();
     }
 }

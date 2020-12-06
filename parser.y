@@ -1,11 +1,14 @@
 %{
-#include <iostream>
-
+#include <cstdio>
+extern int yylineno;
 extern int yylex();
 void yyerror(const char*);
 %}
 
+%locations
+
 %define api.value.type {int}
+%define parse.error detailed
 
 %token HOUR
 %token DATE
@@ -34,19 +37,36 @@ void yyerror(const char*);
 %nterm expr_list expr
 %nterm name_list value_list value_var
 %nterm type
+%nterm opt_where opt_order opt_fk
+%nterm sql_stmt_list
+
+%left OR
+%left ANDOP
+%left NOT
+%nonassoc LIKE
+%left BETWEEN
+%left GEQ LEQ NEQ EQ LT GT
 
 
-%start sql_stmt
+%start sql_stmt_list
 
 %%
+
+sql_stmt_list: sql_stmt_list sql_stmt | sql_stmt
+;
 
 sql_stmt: create_stmt | insert_stmt | select_stmt | update_stmt | delete_stmt | truncate_stmt | drop_stmt | quit_stmt
 ;
 
-create_stmt: CREATE TABLE NAME RO create_stmt_list PRIMARY KEY RO NAME RC C fk_stmt_list RC CM
+create_stmt: CREATE TABLE NAME RO create_stmt_list C PRIMARY KEY RO NAME RC opt_fk RC CM
 ;
 
-fk_stmt_list: fk_stmt_list C FOREIGN KEY RO NAME RC REFERENCES NAME RO NAME RC | FOREIGN KEY RO NAME RC REFERENCES NAME RO NAME RC
+opt_fk: | C fk_stmt_list
+;
+
+fk_stmt_list:
+  fk_stmt_list C FOREIGN KEY RO NAME RC REFERENCES NAME RO NAME RC 
+| FOREIGN KEY RO NAME RC REFERENCES NAME RO NAME RC
 ;
 
 create_stmt_list: create_stmt_list C create_stmt_var | create_stmt_var
@@ -59,14 +79,14 @@ insert_stmt: INSERT INTO NAME RO name_list RC VALUES RO value_list RC CM
 ;
 
 select_stmt:
-  SELECT S FROM name_list CM
-| SELECT S FROM name_list order_expr CM
-| SELECT S FROM name_list WHERE expr_list CM
-| SELECT S FROM name_list WHERE expr_list order_expr CM
-| SELECT name_list FROM name_list CM
-| SELECT name_list FROM name_list order_expr CM
-| SELECT name_list FROM name_list WHERE expr_list CM
-| SELECT name_list FROM name_list WHERE expr_list order_expr CM
+  SELECT S FROM name_list opt_where opt_order CM
+| SELECT name_list FROM name_list opt_where opt_order CM
+;
+
+opt_order: | order_expr
+;
+
+opt_where: | WHERE expr_list
 ;
 
 order_expr:
@@ -78,7 +98,7 @@ order_expr:
 delete_stmt: DELETE FROM NAME WHERE expr_list CM
 ;
 
-update_stmt: UPDATE NAME SET set_stmt_list CM
+update_stmt: UPDATE NAME SET set_stmt_list WHERE expr_list CM
 ;
 
 set_stmt_list: set_stmt_list C NAME EQ value_var | NAME EQ value_var
@@ -98,8 +118,8 @@ expr:
 | expr LT expr
 | expr GT expr
 | NOT expr
-| expr BETWEEN expr AND expr
-| expr LIKE QSTRING /*todo check*/
+| expr BETWEEN expr AND expr %prec BETWEEN
+| expr LIKE QSTRING
 | NAME
 | value_var
 ;
@@ -129,5 +149,5 @@ type: INT_TYPE | FLOAT_TYPE | CHAR_TYPE | TEXT_TYPE | DATE_TYPE | HOUR_TYPE
 %%
 
 void yyerror(const char* err) {
-    std::cout << err << std::endl;
+  printf("SYNTAX ERROR [%d:%d]\n%s", yylloc.first_line, yylloc.first_column, err);
 }

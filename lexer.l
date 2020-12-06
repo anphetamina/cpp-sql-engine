@@ -1,11 +1,21 @@
 %{
 #include "parser.hpp"
 
-#define TOKEN(name) { printf("%s: %s\n", #name, yytext);  }
+#define TOKEN(name) { printf("%s: %s\n", #name, yytext); return name; }
+
+#define YY_USER_ACTION                                               \
+    yylloc.first_line = yylloc.last_line;                          \
+    yylloc.first_column = yylloc.last_column;                      \
+    if (yylloc.last_line == yylineno)                               \
+      yylloc.last_column += yyleng;                                 \
+    else {                                                           \
+      yylloc.last_line = yylineno;                                  \
+      yylloc.last_column = yytext + yyleng - strrchr(yytext, '\n'); \
+    }
 %}
 
 
-%option noyywrap case-insensitive
+%option noyywrap case-insensitive yylineno
 
 ws                      [ \t]+
 nl                      [\n]+
@@ -75,7 +85,7 @@ FLOAT                   TOKEN(FLOAT_TYPE);
 DATE                    TOKEN(DATE_TYPE);
 CHAR                    TOKEN(CHAR_TYPE);
 TEXT                    TOKEN(TEXT_TYPE);
-HOUR                    TOKEN(HOUR_TYPE);
+TIME                    TOKEN(HOUR_TYPE);
 
 {hour}|\"{hour}\"       TOKEN(HOUR);
 {date}|\"{date}\"       TOKEN(DATE);

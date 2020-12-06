@@ -8,7 +8,7 @@ set(project_name cpp_sql_engine)
 find_package(BISON REQUIRED)
 find_package(FLEX REQUIRED)
 
-BISON_TARGET(parser parser.y ${CMAKE_SOURCE_DIR}/parser.cpp)
+BISON_TARGET(parser parser.y ${CMAKE_SOURCE_DIR}/parser.cpp COMPILE_FLAGS -Wcounterexamples)
 FLEX_TARGET(lexer lexer.l ${CMAKE_SOURCE_DIR}/lexer.cpp)
 ADD_FLEX_BISON_DEPENDENCY(lexer parser)
 
