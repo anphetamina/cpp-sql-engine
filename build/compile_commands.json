@@ -1,0 +1,17 @@
+[
+{
+  "directory": "D:/asant/workspace/CLionProjects/cpp-sql-engine/build",
+  "command": "C:\\Qt\\Tools\\mingw810_64\\bin\\g++.exe  @CMakeFiles/cpp_sql_engine.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\cpp_sql_engine.dir\\main.cpp.obj -c D:\\asant\\workspace\\CLionProjects\\cpp-sql-engine\\main.cpp",
+  "file": "D:/asant/workspace/CLionProjects/cpp-sql-engine/main.cpp"
+},
+{
+  "directory": "D:/asant/workspace/CLionProjects/cpp-sql-engine/build",
+  "command": "C:\\Qt\\Tools\\mingw810_64\\bin\\g++.exe  @CMakeFiles/cpp_sql_engine.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\cpp_sql_engine.dir\\parser.cpp.obj -c D:\\asant\\workspace\\CLionProjects\\cpp-sql-engine\\parser.cpp",
+  "file": "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+},
+{
+  "directory": "D:/asant/workspace/CLionProjects/cpp-sql-engine/build",
+  "command": "C:\\Qt\\Tools\\mingw810_64\\bin\\g++.exe  @CMakeFiles/cpp_sql_engine.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\cpp_sql_engine.dir\\lexer.cpp.obj -c D:\\asant\\workspace\\CLionProjects\\cpp-sql-engine\\lexer.cpp",
+  "file": "D:/asant/workspace/CLionProjects/cpp-sql-engine/lexer.cpp"
+}
+]

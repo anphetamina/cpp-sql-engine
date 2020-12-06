@@ -1,0 +1,3 @@
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cpp_sql_engine.dir/objects.a
+C:\Qt\Tools\mingw810_64\bin\ar.exe cr CMakeFiles\cpp_sql_engine.dir/objects.a @CMakeFiles\cpp_sql_engine.dir\objects1.rsp
+C:\Qt\Tools\mingw810_64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\cpp_sql_engine.dir/objects.a -Wl,--no-whole-archive -o cpp_sql_engine.exe -Wl,--out-implib,libcpp_sql_engine.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cpp_sql_engine.dir\linklibs.rsp
