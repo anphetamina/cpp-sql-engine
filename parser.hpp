@@ -126,10 +126,15 @@ union YYSTYPE
 
   SqlStatement* stmt_t;
   CreateStatement* create_t;
+  InsertStatement* insert_t;
+  DeleteStatement* delete_t;
+  UpdateStatement* update_t;
   SelectStatement* select_t;
   DropStatement* drop_t;
+  TruncateStatement* truncate_t;
+  QuitStatement* quit_t;
 
-#line 133 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.hpp"
+#line 138 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.hpp"
 
 };
 typedef union YYSTYPE YYSTYPE;

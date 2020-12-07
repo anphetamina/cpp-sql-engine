@@ -5,37 +5,70 @@ CMakeFiles/cpp_sql_engine.dir/createstatement.cpp.obj
  D:/asant/workspace/CLionProjects/cpp-sql-engine/createstatement.cpp
  D:/asant/workspace/CLionProjects/cpp-sql-engine/createstatement.h
  D:/asant/workspace/CLionProjects/cpp-sql-engine/sqlstatement.h
+CMakeFiles/cpp_sql_engine.dir/deletestatement.cpp.obj
+ D:/asant/workspace/CLionProjects/cpp-sql-engine/deletestatement.cpp
+ D:/asant/workspace/CLionProjects/cpp-sql-engine/deletestatement.h
+ D:/asant/workspace/CLionProjects/cpp-sql-engine/sqlstatement.h
 CMakeFiles/cpp_sql_engine.dir/dropstatement.cpp.obj
  D:/asant/workspace/CLionProjects/cpp-sql-engine/dropstatement.cpp
  D:/asant/workspace/CLionProjects/cpp-sql-engine/dropstatement.h
  D:/asant/workspace/CLionProjects/cpp-sql-engine/sqlstatement.h
+CMakeFiles/cpp_sql_engine.dir/insertstatement.cpp.obj
+ D:/asant/workspace/CLionProjects/cpp-sql-engine/insertstatement.cpp
+ D:/asant/workspace/CLionProjects/cpp-sql-engine/insertstatement.h
+ D:/asant/workspace/CLionProjects/cpp-sql-engine/sqlstatement.h
 CMakeFiles/cpp_sql_engine.dir/lexer.cpp.obj
  D:/asant/workspace/CLionProjects/cpp-sql-engine/createstatement.h
+ D:/asant/workspace/CLionProjects/cpp-sql-engine/deletestatement.h
  D:/asant/workspace/CLionProjects/cpp-sql-engine/dropstatement.h
+ D:/asant/workspace/CLionProjects/cpp-sql-engine/insertstatement.h
  D:/asant/workspace/CLionProjects/cpp-sql-engine/lexer.cpp
  D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.hpp
  D:/asant/workspace/CLionProjects/cpp-sql-engine/parser_types.h
+ D:/asant/workspace/CLionProjects/cpp-sql-engine/quitstatement.h
  D:/asant/workspace/CLionProjects/cpp-sql-engine/selectstatement.h
  D:/asant/workspace/CLionProjects/cpp-sql-engine/sqlstatement.h
+ D:/asant/workspace/CLionProjects/cpp-sql-engine/truncatestatement.h
+ D:/asant/workspace/CLionProjects/cpp-sql-engine/updatestatement.h
 CMakeFiles/cpp_sql_engine.dir/main.cpp.obj
  D:/asant/workspace/CLionProjects/cpp-sql-engine/createstatement.h
+ D:/asant/workspace/CLionProjects/cpp-sql-engine/deletestatement.h
  D:/asant/workspace/CLionProjects/cpp-sql-engine/dropstatement.h
+ D:/asant/workspace/CLionProjects/cpp-sql-engine/insertstatement.h
  D:/asant/workspace/CLionProjects/cpp-sql-engine/main.cpp
  D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.hpp
  D:/asant/workspace/CLionProjects/cpp-sql-engine/parser_types.h
+ D:/asant/workspace/CLionProjects/cpp-sql-engine/quitstatement.h
  D:/asant/workspace/CLionProjects/cpp-sql-engine/selectstatement.h
  D:/asant/workspace/CLionProjects/cpp-sql-engine/sqlstatement.h
+ D:/asant/workspace/CLionProjects/cpp-sql-engine/truncatestatement.h
+ D:/asant/workspace/CLionProjects/cpp-sql-engine/updatestatement.h
 CMakeFiles/cpp_sql_engine.dir/parser.cpp.obj
  D:/asant/workspace/CLionProjects/cpp-sql-engine/createstatement.h
+ D:/asant/workspace/CLionProjects/cpp-sql-engine/deletestatement.h
  D:/asant/workspace/CLionProjects/cpp-sql-engine/dropstatement.h
+ D:/asant/workspace/CLionProjects/cpp-sql-engine/insertstatement.h
  D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp
  D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.hpp
  D:/asant/workspace/CLionProjects/cpp-sql-engine/parser_types.h
+ D:/asant/workspace/CLionProjects/cpp-sql-engine/quitstatement.h
  D:/asant/workspace/CLionProjects/cpp-sql-engine/selectstatement.h
+ D:/asant/workspace/CLionProjects/cpp-sql-engine/sqlstatement.h
+ D:/asant/workspace/CLionProjects/cpp-sql-engine/truncatestatement.h
+ D:/asant/workspace/CLionProjects/cpp-sql-engine/updatestatement.h
+CMakeFiles/cpp_sql_engine.dir/quitstatement.cpp.obj
+ D:/asant/workspace/CLionProjects/cpp-sql-engine/quitstatement.cpp
+ D:/asant/workspace/CLionProjects/cpp-sql-engine/quitstatement.h
  D:/asant/workspace/CLionProjects/cpp-sql-engine/sqlstatement.h
 CMakeFiles/cpp_sql_engine.dir/selectstatement.cpp.obj
  D:/asant/workspace/CLionProjects/cpp-sql-engine/selectstatement.cpp
  D:/asant/workspace/CLionProjects/cpp-sql-engine/selectstatement.h
  D:/asant/workspace/CLionProjects/cpp-sql-engine/sqlstatement.h
-CMakeFiles/cpp_sql_engine.dir/sqlstatement.cpp.obj
- D:/asant/workspace/CLionProjects/cpp-sql-engine/sqlstatement.cpp
+CMakeFiles/cpp_sql_engine.dir/truncatestatement.cpp.obj
+ D:/asant/workspace/CLionProjects/cpp-sql-engine/sqlstatement.h
+ D:/asant/workspace/CLionProjects/cpp-sql-engine/truncatestatement.cpp
+ D:/asant/workspace/CLionProjects/cpp-sql-engine/truncatestatement.h
+CMakeFiles/cpp_sql_engine.dir/updatestatement.cpp.obj
+ D:/asant/workspace/CLionProjects/cpp-sql-engine/sqlstatement.h
+ D:/asant/workspace/CLionProjects/cpp-sql-engine/updatestatement.cpp
+ D:/asant/workspace/CLionProjects/cpp-sql-engine/updatestatement.h

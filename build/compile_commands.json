@@ -6,13 +6,28 @@
 },
 {
   "directory": "D:/asant/workspace/CLionProjects/cpp-sql-engine/build",
-  "command": "C:\\Qt\\Tools\\mingw810_64\\bin\\g++.exe  @CMakeFiles/cpp_sql_engine.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\cpp_sql_engine.dir\\sqlstatement.cpp.obj -c D:\\asant\\workspace\\CLionProjects\\cpp-sql-engine\\sqlstatement.cpp",
-  "file": "D:/asant/workspace/CLionProjects/cpp-sql-engine/sqlstatement.cpp"
+  "command": "C:\\Qt\\Tools\\mingw810_64\\bin\\g++.exe  @CMakeFiles/cpp_sql_engine.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\cpp_sql_engine.dir\\createstatement.cpp.obj -c D:\\asant\\workspace\\CLionProjects\\cpp-sql-engine\\createstatement.cpp",
+  "file": "D:/asant/workspace/CLionProjects/cpp-sql-engine/createstatement.cpp"
 },
 {
   "directory": "D:/asant/workspace/CLionProjects/cpp-sql-engine/build",
-  "command": "C:\\Qt\\Tools\\mingw810_64\\bin\\g++.exe  @CMakeFiles/cpp_sql_engine.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\cpp_sql_engine.dir\\createstatement.cpp.obj -c D:\\asant\\workspace\\CLionProjects\\cpp-sql-engine\\createstatement.cpp",
-  "file": "D:/asant/workspace/CLionProjects/cpp-sql-engine/createstatement.cpp"
+  "command": "C:\\Qt\\Tools\\mingw810_64\\bin\\g++.exe  @CMakeFiles/cpp_sql_engine.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\cpp_sql_engine.dir\\deletestatement.cpp.obj -c D:\\asant\\workspace\\CLionProjects\\cpp-sql-engine\\deletestatement.cpp",
+  "file": "D:/asant/workspace/CLionProjects/cpp-sql-engine/deletestatement.cpp"
+},
+{
+  "directory": "D:/asant/workspace/CLionProjects/cpp-sql-engine/build",
+  "command": "C:\\Qt\\Tools\\mingw810_64\\bin\\g++.exe  @CMakeFiles/cpp_sql_engine.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\cpp_sql_engine.dir\\dropstatement.cpp.obj -c D:\\asant\\workspace\\CLionProjects\\cpp-sql-engine\\dropstatement.cpp",
+  "file": "D:/asant/workspace/CLionProjects/cpp-sql-engine/dropstatement.cpp"
+},
+{
+  "directory": "D:/asant/workspace/CLionProjects/cpp-sql-engine/build",
+  "command": "C:\\Qt\\Tools\\mingw810_64\\bin\\g++.exe  @CMakeFiles/cpp_sql_engine.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\cpp_sql_engine.dir\\insertstatement.cpp.obj -c D:\\asant\\workspace\\CLionProjects\\cpp-sql-engine\\insertstatement.cpp",
+  "file": "D:/asant/workspace/CLionProjects/cpp-sql-engine/insertstatement.cpp"
+},
+{
+  "directory": "D:/asant/workspace/CLionProjects/cpp-sql-engine/build",
+  "command": "C:\\Qt\\Tools\\mingw810_64\\bin\\g++.exe  @CMakeFiles/cpp_sql_engine.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\cpp_sql_engine.dir\\quitstatement.cpp.obj -c D:\\asant\\workspace\\CLionProjects\\cpp-sql-engine\\quitstatement.cpp",
+  "file": "D:/asant/workspace/CLionProjects/cpp-sql-engine/quitstatement.cpp"
 },
 {
   "directory": "D:/asant/workspace/CLionProjects/cpp-sql-engine/build",
@@ -21,8 +36,13 @@
 },
 {
   "directory": "D:/asant/workspace/CLionProjects/cpp-sql-engine/build",
-  "command": "C:\\Qt\\Tools\\mingw810_64\\bin\\g++.exe  @CMakeFiles/cpp_sql_engine.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\cpp_sql_engine.dir\\dropstatement.cpp.obj -c D:\\asant\\workspace\\CLionProjects\\cpp-sql-engine\\dropstatement.cpp",
-  "file": "D:/asant/workspace/CLionProjects/cpp-sql-engine/dropstatement.cpp"
+  "command": "C:\\Qt\\Tools\\mingw810_64\\bin\\g++.exe  @CMakeFiles/cpp_sql_engine.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\cpp_sql_engine.dir\\truncatestatement.cpp.obj -c D:\\asant\\workspace\\CLionProjects\\cpp-sql-engine\\truncatestatement.cpp",
+  "file": "D:/asant/workspace/CLionProjects/cpp-sql-engine/truncatestatement.cpp"
+},
+{
+  "directory": "D:/asant/workspace/CLionProjects/cpp-sql-engine/build",
+  "command": "C:\\Qt\\Tools\\mingw810_64\\bin\\g++.exe  @CMakeFiles/cpp_sql_engine.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\cpp_sql_engine.dir\\updatestatement.cpp.obj -c D:\\asant\\workspace\\CLionProjects\\cpp-sql-engine\\updatestatement.cpp",
+  "file": "D:/asant/workspace/CLionProjects/cpp-sql-engine/updatestatement.cpp"
 },
 {
   "directory": "D:/asant/workspace/CLionProjects/cpp-sql-engine/build",

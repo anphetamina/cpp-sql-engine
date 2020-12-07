@@ -10,7 +10,15 @@ D:/asant/workspace/CLionProjects/cpp-sql-engine/createstatement.h
 sqlstatement.h
 D:/asant/workspace/CLionProjects/cpp-sql-engine/sqlstatement.h
 
+D:/asant/workspace/CLionProjects/cpp-sql-engine/deletestatement.h
+sqlstatement.h
+D:/asant/workspace/CLionProjects/cpp-sql-engine/sqlstatement.h
+
 D:/asant/workspace/CLionProjects/cpp-sql-engine/dropstatement.h
+sqlstatement.h
+D:/asant/workspace/CLionProjects/cpp-sql-engine/sqlstatement.h
+
+D:/asant/workspace/CLionProjects/cpp-sql-engine/insertstatement.h
 sqlstatement.h
 D:/asant/workspace/CLionProjects/cpp-sql-engine/sqlstatement.h
 
@@ -77,6 +85,20 @@ selectstatement.h
 D:/asant/workspace/CLionProjects/cpp-sql-engine/selectstatement.h
 dropstatement.h
 D:/asant/workspace/CLionProjects/cpp-sql-engine/dropstatement.h
+insertstatement.h
+D:/asant/workspace/CLionProjects/cpp-sql-engine/insertstatement.h
+deletestatement.h
+D:/asant/workspace/CLionProjects/cpp-sql-engine/deletestatement.h
+updatestatement.h
+D:/asant/workspace/CLionProjects/cpp-sql-engine/updatestatement.h
+truncatestatement.h
+D:/asant/workspace/CLionProjects/cpp-sql-engine/truncatestatement.h
+quitstatement.h
+D:/asant/workspace/CLionProjects/cpp-sql-engine/quitstatement.h
+
+D:/asant/workspace/CLionProjects/cpp-sql-engine/quitstatement.h
+sqlstatement.h
+D:/asant/workspace/CLionProjects/cpp-sql-engine/sqlstatement.h
 
 D:/asant/workspace/CLionProjects/cpp-sql-engine/selectstatement.h
 sqlstatement.h
@@ -85,4 +107,12 @@ D:/asant/workspace/CLionProjects/cpp-sql-engine/sqlstatement.h
 D:/asant/workspace/CLionProjects/cpp-sql-engine/sqlstatement.h
 iostream
 -
+
+D:/asant/workspace/CLionProjects/cpp-sql-engine/truncatestatement.h
+sqlstatement.h
+D:/asant/workspace/CLionProjects/cpp-sql-engine/sqlstatement.h
+
+D:/asant/workspace/CLionProjects/cpp-sql-engine/updatestatement.h
+sqlstatement.h
+D:/asant/workspace/CLionProjects/cpp-sql-engine/sqlstatement.h
 

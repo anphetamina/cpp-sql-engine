@@ -18,8 +18,13 @@ void yyerror(const char*);
 %union {
   SqlStatement* stmt_t;
   CreateStatement* create_t;
+  InsertStatement* insert_t;
+  DeleteStatement* delete_t;
+  UpdateStatement* update_t;
   SelectStatement* select_t;
   DropStatement* drop_t;
+  TruncateStatement* truncate_t;
+  QuitStatement* quit_t;
 }
 
 %token HOUR
@@ -42,14 +47,14 @@ void yyerror(const char*);
 %nterm create_stmt_list
 %nterm create_stmt_var
 %nterm fk_stmt_list
-%type<select_t> insert_stmt
+%type<insert_t> insert_stmt
 %type<select_t> select_stmt
-%type<select_t> update_stmt
+%type<update_t> update_stmt
 %nterm set_stmt_list
-%type<select_t> delete_stmt
-%type<select_t> truncate_stmt
+%type<delete_t> delete_stmt
+%type<truncate_t> truncate_stmt
 %type<drop_t> drop_stmt
-%type<select_t> quit_stmt
+%type<quit_t> quit_stmt
 %nterm order_expr
 %nterm expr_list expr
 %nterm name_list value_list value_var
@@ -113,7 +118,7 @@ create_stmt_var: NAME col_type | NAME col_type NOT_NULL | NAME col_type NOT_NULL
 
 insert_stmt: INSERT INTO NAME RO name_list RC VALUES RO value_list RC CM
 {
-  $$ = new SelectStatement();
+  $$ = new InsertStatement();
 }
 ;
 
@@ -142,13 +147,13 @@ ORDER BY NAME
 
 delete_stmt: DELETE FROM NAME WHERE expr_list CM
 {
-  $$ = new SelectStatement();
+  $$ = new DeleteStatement();
 }
 ;
 
 update_stmt: UPDATE NAME SET set_stmt_list WHERE expr_list CM
 {
-  $$ = new SelectStatement();
+  $$ = new UpdateStatement();
 }
 ;
 ;
@@ -178,7 +183,7 @@ expr NEQ expr
 
 truncate_stmt: TRUNCATE TABLE NAME CM
 {
-  $$ = new SelectStatement();
+  $$ = new TruncateStatement();
 }
 ;
 
@@ -190,7 +195,7 @@ drop_stmt: DROP TABLE NAME CM
 
 quit_stmt: QUIT CM
 {
-  $$ = new SelectStatement();
+  $$ = new QuitStatement();
 }
 ;
 

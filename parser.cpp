@@ -563,13 +563,13 @@ static const yytype_int8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    72,    72,    82,    94,    95,    96,    97,    98,    99,
-     100,   101,   104,   110,   110,   114,   115,   118,   118,   121,
-     121,   121,   124,   131,   135,   141,   141,   144,   144,   148,
-     149,   150,   153,   159,   166,   166,   170,   171,   172,   176,
-     177,   178,   179,   180,   181,   182,   183,   184,   185,   186,
-     189,   195,   201,   207,   207,   210,   210,   213,   213,   213,
-     213,   213,   216,   216,   216,   216,   216,   216
+       0,    77,    77,    82,    89,    90,    91,    92,    93,    94,
+      95,    96,    99,   105,   105,   109,   110,   113,   113,   116,
+     116,   116,   119,   126,   130,   136,   136,   139,   139,   143,
+     144,   145,   148,   154,   161,   161,   165,   166,   167,   171,
+     172,   173,   174,   175,   176,   177,   178,   179,   180,   181,
+     184,   190,   196,   202,   202,   205,   205,   208,   208,   208,
+     208,   208,   211,   211,   211,   211,   211,   211
 };
 #endif
 
@@ -1569,154 +1569,144 @@ yyreduce:
   switch (yyn)
     {
   case 2: /* prog: sql_stmt  */
-#line 73 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+#line 78 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
 {
-  try {
-    (yyvsp[0].stmt_t)->execute();
-  } catch(const std::exception& e) {
-    std::cout << "exception" << std::endl;
-    e.what();
-  };
+  (yyvsp[0].stmt_t)->execute();
   
 }
-#line 1583 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+#line 1578 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
     break;
 
   case 3: /* prog: prog sql_stmt  */
 #line 83 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
 {
-  try {
-    (yyvsp[0].stmt_t)->execute();
-  } catch(const std::exception& e) {
-    std::cout << "exception" << std::endl;
-    e.what();
-  };
+  (yyvsp[0].stmt_t)->execute();
 }
-#line 1596 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+#line 1586 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
     break;
 
   case 4: /* sql_stmt: create_stmt  */
-#line 94 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+#line 89 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
             { (yyval.stmt_t) = (yyvsp[0].create_t); }
-#line 1602 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+#line 1592 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
     break;
 
   case 5: /* sql_stmt: insert_stmt  */
-#line 95 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
-              { (yyval.stmt_t) = (yyvsp[0].select_t); }
-#line 1608 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+#line 90 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+              { (yyval.stmt_t) = (yyvsp[0].insert_t); }
+#line 1598 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
     break;
 
   case 6: /* sql_stmt: select_stmt  */
-#line 96 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+#line 91 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
               { (yyval.stmt_t) = (yyvsp[0].select_t); }
-#line 1614 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+#line 1604 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
     break;
 
   case 7: /* sql_stmt: update_stmt  */
-#line 97 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
-              { (yyval.stmt_t) = (yyvsp[0].select_t); }
-#line 1620 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+#line 92 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+              { (yyval.stmt_t) = (yyvsp[0].update_t); }
+#line 1610 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
     break;
 
   case 8: /* sql_stmt: delete_stmt  */
-#line 98 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
-              { (yyval.stmt_t) = (yyvsp[0].select_t); }
-#line 1626 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+#line 93 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+              { (yyval.stmt_t) = (yyvsp[0].delete_t); }
+#line 1616 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
     break;
 
   case 9: /* sql_stmt: truncate_stmt  */
-#line 99 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
-                { (yyval.stmt_t) = (yyvsp[0].select_t); }
-#line 1632 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+#line 94 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+                { (yyval.stmt_t) = (yyvsp[0].truncate_t); }
+#line 1622 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
     break;
 
   case 10: /* sql_stmt: drop_stmt  */
-#line 100 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+#line 95 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
             { (yyval.stmt_t) = (yyvsp[0].drop_t); }
-#line 1638 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+#line 1628 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
     break;
 
   case 11: /* sql_stmt: quit_stmt  */
-#line 101 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
-            { (yyval.stmt_t) = (yyvsp[0].select_t); }
-#line 1644 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+#line 96 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+            { (yyval.stmt_t) = (yyvsp[0].quit_t); }
+#line 1634 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
     break;
 
   case 12: /* create_stmt: CREATE TABLE NAME RO create_stmt_list C PRIMARY KEY RO NAME RC opt_fk RC CM  */
-#line 105 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+#line 100 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
 {
   (yyval.create_t) = new CreateStatement();
 }
-#line 1652 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+#line 1642 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
     break;
 
   case 22: /* insert_stmt: INSERT INTO NAME RO name_list RC VALUES RO value_list RC CM  */
-#line 125 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+#line 120 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
 {
-  (yyval.select_t) = new SelectStatement();
+  (yyval.insert_t) = new InsertStatement();
 }
-#line 1660 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+#line 1650 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
     break;
 
   case 23: /* select_stmt: SELECT S FROM name_list opt_where opt_order CM  */
-#line 132 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+#line 127 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
 {
   (yyval.select_t) = new SelectStatement();
 }
-#line 1668 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+#line 1658 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
     break;
 
   case 24: /* select_stmt: SELECT name_list FROM name_list opt_where opt_order CM  */
-#line 136 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+#line 131 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
 {
   (yyval.select_t) = new SelectStatement();
 }
-#line 1676 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+#line 1666 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
     break;
 
   case 32: /* delete_stmt: DELETE FROM NAME WHERE expr_list CM  */
-#line 154 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+#line 149 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
 {
-  (yyval.select_t) = new SelectStatement();
+  (yyval.delete_t) = new DeleteStatement();
 }
-#line 1684 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+#line 1674 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
     break;
 
   case 33: /* update_stmt: UPDATE NAME SET set_stmt_list WHERE expr_list CM  */
-#line 160 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+#line 155 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
 {
-  (yyval.select_t) = new SelectStatement();
+  (yyval.update_t) = new UpdateStatement();
 }
-#line 1692 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+#line 1682 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
     break;
 
   case 50: /* truncate_stmt: TRUNCATE TABLE NAME CM  */
-#line 190 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+#line 185 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
 {
-  (yyval.select_t) = new SelectStatement();
+  (yyval.truncate_t) = new TruncateStatement();
 }
-#line 1700 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+#line 1690 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
     break;
 
   case 51: /* drop_stmt: DROP TABLE NAME CM  */
-#line 196 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+#line 191 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
 {
   (yyval.drop_t) = new DropStatement();
 }
-#line 1708 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+#line 1698 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
     break;
 
   case 52: /* quit_stmt: QUIT CM  */
-#line 202 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+#line 197 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
 {
-  (yyval.select_t) = new SelectStatement();
+  (yyval.quit_t) = new QuitStatement();
 }
-#line 1716 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+#line 1706 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
     break;
 
 
-#line 1720 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+#line 1710 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
 
       default: break;
     }
@@ -1946,7 +1936,7 @@ yyreturn:
   return yyresult;
 }
 
-#line 220 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+#line 215 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
 
 
 void yyerror(const char* err) {
