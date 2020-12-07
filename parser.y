@@ -109,8 +109,12 @@ fk_list C FOREIGN KEY RO NAME RC REFERENCES NAME RO NAME RC
 col_def_list: col_def_list C col_def_var | col_def_var
 ;
 
-col_def_var: NAME col_type | NAME col_type NOT_NULL | NAME col_type NOT_NULL AUTO_INCREMENT
-; /* TODO fix */
+col_def_var: 
+NAME col_type 
+| NAME col_type NOT_NULL
+| NAME col_type AUTO_INCREMENT
+| NAME col_type NOT_NULL AUTO_INCREMENT
+;
 
 insert_stmt: INSERT INTO NAME RO name_list RC VALUES RO value_list RC CM
 {
