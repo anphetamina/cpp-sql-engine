@@ -33,33 +33,30 @@ void yyerror(const char*);
 %token QSTRING
 %token INT
 %token FLOAT
-%token NEQ LEQ GEQ RO RC C CM S EQ LT GT
+%token NEQ LEQ GEQ RO RC C CM S EQ LT GT D
 %token AND OR BETWEEN PRIMARY CREATE TABLE REFERENCES
 %token DELETE INSERT SELECT UPDATE VALUES ORDER INTO
 %token WHERE DESC ASC DROP FROM LIKE ANDOP KEY NOT NOT_NULL SET
 %token AS BY TRUNCATE QUIT AUTO_INCREMENT FOREIGN
 %token INT_TYPE FLOAT_TYPE DATE_TYPE CHAR_TYPE TEXT_TYPE HOUR_TYPE
 
-/*todo richiesta ulteriore V + aliases*/
-
 %type<stmt_t> sql_stmt
 %type<create_t> create_stmt
-%nterm create_stmt_list
-%nterm create_stmt_var
-%nterm fk_stmt_list
 %type<insert_t> insert_stmt
 %type<select_t> select_stmt
 %type<update_t> update_stmt
-%nterm set_stmt_list
 %type<delete_t> delete_stmt
 %type<truncate_t> truncate_stmt
 %type<drop_t> drop_stmt
 %type<quit_t> quit_stmt
+%nterm col_def_list col_def_var
+%nterm fk_list
+%nterm assign_list
 %nterm order_expr
 %nterm expr_list expr
-%nterm name_list value_list value_var
-%nterm col_type
-%nterm opt_where opt_order opt_fk
+%nterm value_list value_var
+%nterm col_type col_list col_var
+%nterm opt_where opt_order opt_fk opt_as
 
 %left OR
 %left ANDOP
@@ -67,7 +64,6 @@ void yyerror(const char*);
 %nonassoc LIKE
 %left BETWEEN
 %left GEQ LEQ NEQ EQ LT GT
-
 
 %start prog
 
@@ -96,25 +92,25 @@ create_stmt { $$ = $1; }
 | quit_stmt { $$ = $1; }
 ;
 
-create_stmt: CREATE TABLE NAME RO create_stmt_list C PRIMARY KEY RO NAME RC opt_fk RC CM
+create_stmt: CREATE TABLE NAME RO col_def_list C PRIMARY KEY RO NAME RC opt_fk RC CM
 {
   $$ = new CreateStatement();
 }
 ;
 
-opt_fk: | C fk_stmt_list
+opt_fk: | C fk_list
 ;
 
-fk_stmt_list:
-fk_stmt_list C FOREIGN KEY RO NAME RC REFERENCES NAME RO NAME RC 
+fk_list:
+fk_list C FOREIGN KEY RO NAME RC REFERENCES NAME RO NAME RC 
 | FOREIGN KEY RO NAME RC REFERENCES NAME RO NAME RC
 ;
 
-create_stmt_list: create_stmt_list C create_stmt_var | create_stmt_var
+col_def_list: col_def_list C col_def_var | col_def_var
 ;
 
-create_stmt_var: NAME col_type | NAME col_type NOT_NULL | NAME col_type NOT_NULL AUTO_INCREMENT
-;
+col_def_var: NAME col_type | NAME col_type NOT_NULL | NAME col_type NOT_NULL AUTO_INCREMENT
+; /* TODO fix */
 
 insert_stmt: INSERT INTO NAME RO name_list RC VALUES RO value_list RC CM
 {
@@ -127,10 +123,23 @@ SELECT S FROM name_list opt_where opt_order CM
 {
   $$ = new SelectStatement();
 }
-| SELECT name_list FROM name_list opt_where opt_order CM
+| SELECT col_list FROM name_list opt_where opt_order CM
 {
   $$ = new SelectStatement();
 }
+;
+
+col_list:
+col_list C col_var opt_as
+| col_var opt_as
+;
+
+col_var:
+NAME D NAME
+| NAME
+;
+
+opt_as: | AS NAME
 ;
 
 opt_order: | order_expr
@@ -151,14 +160,13 @@ delete_stmt: DELETE FROM NAME WHERE expr_list CM
 }
 ;
 
-update_stmt: UPDATE NAME SET set_stmt_list WHERE expr_list CM
+update_stmt: UPDATE NAME SET assign_list WHERE expr_list CM
 {
   $$ = new UpdateStatement();
 }
 ;
-;
 
-set_stmt_list: set_stmt_list C NAME EQ value_var | NAME EQ value_var
+assign_list: assign_list C NAME EQ value_var | NAME EQ value_var
 ;
 
 expr_list:

@@ -79,6 +79,7 @@ INTO                    TOKEN(INTO);
 "="                     TOKEN(EQ);
 "<"                     TOKEN(LT);
 ">"                     TOKEN(GT);
+"."                     TOKEN(D);
 
 INT                     TOKEN(INT_TYPE);
 FLOAT                   TOKEN(FLOAT_TYPE);

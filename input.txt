@@ -63,7 +63,7 @@ select nome,cognome,media,id,matricola,tempo from studenti order by tempo asc;
 select nome,cognome,media,id,nascita,tempo from studenti order by nascita desc;
 select nome,cognome,media,id,matricola,crediti from studenti where crediti between 120 and 170;
 select nome,cognome,media,id,matricola,nascita from studenti where nascita between "23/02/1990" and "23/02/2000";
-select nome,cognome,media,id,matricola,tempo from studenti where cognome between "AAA" and "GGGH";
+select nome as n,cognome as c,media as m,id,matricola,tempo from studenti where cognome between "AAA" and "GGGH";
 select nome,cognome,media,id,matricola,tempo from studenti where nazione <= 3 order by media asc;
 select nome,cognome,media,id,matricola,crediti from studenti where media between 18 and 27 order by crediti desc;
 select nome,cognome,media,id,matricola,crediti from studenti where crediti between 10 and 120 order by cognome asc;

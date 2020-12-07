@@ -77,43 +77,44 @@ extern int yydebug;
     EQ = 272,                      /* EQ  */
     LT = 273,                      /* LT  */
     GT = 274,                      /* GT  */
-    AND = 275,                     /* AND  */
-    OR = 276,                      /* OR  */
-    BETWEEN = 277,                 /* BETWEEN  */
-    PRIMARY = 278,                 /* PRIMARY  */
-    CREATE = 279,                  /* CREATE  */
-    TABLE = 280,                   /* TABLE  */
-    REFERENCES = 281,              /* REFERENCES  */
-    DELETE = 282,                  /* DELETE  */
-    INSERT = 283,                  /* INSERT  */
-    SELECT = 284,                  /* SELECT  */
-    UPDATE = 285,                  /* UPDATE  */
-    VALUES = 286,                  /* VALUES  */
-    ORDER = 287,                   /* ORDER  */
-    INTO = 288,                    /* INTO  */
-    WHERE = 289,                   /* WHERE  */
-    DESC = 290,                    /* DESC  */
-    ASC = 291,                     /* ASC  */
-    DROP = 292,                    /* DROP  */
-    FROM = 293,                    /* FROM  */
-    LIKE = 294,                    /* LIKE  */
-    ANDOP = 295,                   /* ANDOP  */
-    KEY = 296,                     /* KEY  */
-    NOT = 297,                     /* NOT  */
-    NOT_NULL = 298,                /* NOT_NULL  */
-    SET = 299,                     /* SET  */
-    AS = 300,                      /* AS  */
-    BY = 301,                      /* BY  */
-    TRUNCATE = 302,                /* TRUNCATE  */
-    QUIT = 303,                    /* QUIT  */
-    AUTO_INCREMENT = 304,          /* AUTO_INCREMENT  */
-    FOREIGN = 305,                 /* FOREIGN  */
-    INT_TYPE = 306,                /* INT_TYPE  */
-    FLOAT_TYPE = 307,              /* FLOAT_TYPE  */
-    DATE_TYPE = 308,               /* DATE_TYPE  */
-    CHAR_TYPE = 309,               /* CHAR_TYPE  */
-    TEXT_TYPE = 310,               /* TEXT_TYPE  */
-    HOUR_TYPE = 311                /* HOUR_TYPE  */
+    D = 275,                       /* D  */
+    AND = 276,                     /* AND  */
+    OR = 277,                      /* OR  */
+    BETWEEN = 278,                 /* BETWEEN  */
+    PRIMARY = 279,                 /* PRIMARY  */
+    CREATE = 280,                  /* CREATE  */
+    TABLE = 281,                   /* TABLE  */
+    REFERENCES = 282,              /* REFERENCES  */
+    DELETE = 283,                  /* DELETE  */
+    INSERT = 284,                  /* INSERT  */
+    SELECT = 285,                  /* SELECT  */
+    UPDATE = 286,                  /* UPDATE  */
+    VALUES = 287,                  /* VALUES  */
+    ORDER = 288,                   /* ORDER  */
+    INTO = 289,                    /* INTO  */
+    WHERE = 290,                   /* WHERE  */
+    DESC = 291,                    /* DESC  */
+    ASC = 292,                     /* ASC  */
+    DROP = 293,                    /* DROP  */
+    FROM = 294,                    /* FROM  */
+    LIKE = 295,                    /* LIKE  */
+    ANDOP = 296,                   /* ANDOP  */
+    KEY = 297,                     /* KEY  */
+    NOT = 298,                     /* NOT  */
+    NOT_NULL = 299,                /* NOT_NULL  */
+    SET = 300,                     /* SET  */
+    AS = 301,                      /* AS  */
+    BY = 302,                      /* BY  */
+    TRUNCATE = 303,                /* TRUNCATE  */
+    QUIT = 304,                    /* QUIT  */
+    AUTO_INCREMENT = 305,          /* AUTO_INCREMENT  */
+    FOREIGN = 306,                 /* FOREIGN  */
+    INT_TYPE = 307,                /* INT_TYPE  */
+    FLOAT_TYPE = 308,              /* FLOAT_TYPE  */
+    DATE_TYPE = 309,               /* DATE_TYPE  */
+    CHAR_TYPE = 310,               /* CHAR_TYPE  */
+    TEXT_TYPE = 311,               /* TEXT_TYPE  */
+    HOUR_TYPE = 312                /* HOUR_TYPE  */
   };
   typedef enum yytokentype yytoken_kind_t;
 #endif
@@ -134,7 +135,7 @@ union YYSTYPE
   TruncateStatement* truncate_t;
   QuitStatement* quit_t;
 
-#line 138 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.hpp"
+#line 139 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.hpp"
 
 };
 typedef union YYSTYPE YYSTYPE;
