@@ -721,7 +721,7 @@ char *yytext;
 #line 2 "D:/asant/workspace/CLionProjects/cpp-sql-engine/lexer.l"
 #include "parser.hpp"
 
-#define TOKEN(name) { printf("%s: %s\n", #name, yytext); return name; }
+#define TOKEN(name) { /*printf("%s: %s\n", #name, yytext);*/ return name; }
 
 #define YY_USER_ACTION                                               \
     yylloc.first_line = yylloc.last_line;                          \

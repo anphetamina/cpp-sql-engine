@@ -100,10 +100,66 @@ CMakeFiles/cpp_sql_engine.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpp_sql_engine.dir/main.cpp.s"
 	C:\Qt\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\asant\workspace\CLionProjects\cpp-sql-engine\main.cpp -o CMakeFiles\cpp_sql_engine.dir\main.cpp.s
 
+CMakeFiles/cpp_sql_engine.dir/sqlstatement.cpp.obj: CMakeFiles/cpp_sql_engine.dir/flags.make
+CMakeFiles/cpp_sql_engine.dir/sqlstatement.cpp.obj: CMakeFiles/cpp_sql_engine.dir/includes_CXX.rsp
+CMakeFiles/cpp_sql_engine.dir/sqlstatement.cpp.obj: ../sqlstatement.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\asant\workspace\CLionProjects\cpp-sql-engine\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/cpp_sql_engine.dir/sqlstatement.cpp.obj"
+	C:\Qt\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cpp_sql_engine.dir\sqlstatement.cpp.obj -c D:\asant\workspace\CLionProjects\cpp-sql-engine\sqlstatement.cpp
+
+CMakeFiles/cpp_sql_engine.dir/sqlstatement.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cpp_sql_engine.dir/sqlstatement.cpp.i"
+	C:\Qt\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\asant\workspace\CLionProjects\cpp-sql-engine\sqlstatement.cpp > CMakeFiles\cpp_sql_engine.dir\sqlstatement.cpp.i
+
+CMakeFiles/cpp_sql_engine.dir/sqlstatement.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpp_sql_engine.dir/sqlstatement.cpp.s"
+	C:\Qt\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\asant\workspace\CLionProjects\cpp-sql-engine\sqlstatement.cpp -o CMakeFiles\cpp_sql_engine.dir\sqlstatement.cpp.s
+
+CMakeFiles/cpp_sql_engine.dir/createstatement.cpp.obj: CMakeFiles/cpp_sql_engine.dir/flags.make
+CMakeFiles/cpp_sql_engine.dir/createstatement.cpp.obj: CMakeFiles/cpp_sql_engine.dir/includes_CXX.rsp
+CMakeFiles/cpp_sql_engine.dir/createstatement.cpp.obj: ../createstatement.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\asant\workspace\CLionProjects\cpp-sql-engine\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/cpp_sql_engine.dir/createstatement.cpp.obj"
+	C:\Qt\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cpp_sql_engine.dir\createstatement.cpp.obj -c D:\asant\workspace\CLionProjects\cpp-sql-engine\createstatement.cpp
+
+CMakeFiles/cpp_sql_engine.dir/createstatement.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cpp_sql_engine.dir/createstatement.cpp.i"
+	C:\Qt\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\asant\workspace\CLionProjects\cpp-sql-engine\createstatement.cpp > CMakeFiles\cpp_sql_engine.dir\createstatement.cpp.i
+
+CMakeFiles/cpp_sql_engine.dir/createstatement.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpp_sql_engine.dir/createstatement.cpp.s"
+	C:\Qt\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\asant\workspace\CLionProjects\cpp-sql-engine\createstatement.cpp -o CMakeFiles\cpp_sql_engine.dir\createstatement.cpp.s
+
+CMakeFiles/cpp_sql_engine.dir/selectstatement.cpp.obj: CMakeFiles/cpp_sql_engine.dir/flags.make
+CMakeFiles/cpp_sql_engine.dir/selectstatement.cpp.obj: CMakeFiles/cpp_sql_engine.dir/includes_CXX.rsp
+CMakeFiles/cpp_sql_engine.dir/selectstatement.cpp.obj: ../selectstatement.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\asant\workspace\CLionProjects\cpp-sql-engine\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/cpp_sql_engine.dir/selectstatement.cpp.obj"
+	C:\Qt\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cpp_sql_engine.dir\selectstatement.cpp.obj -c D:\asant\workspace\CLionProjects\cpp-sql-engine\selectstatement.cpp
+
+CMakeFiles/cpp_sql_engine.dir/selectstatement.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cpp_sql_engine.dir/selectstatement.cpp.i"
+	C:\Qt\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\asant\workspace\CLionProjects\cpp-sql-engine\selectstatement.cpp > CMakeFiles\cpp_sql_engine.dir\selectstatement.cpp.i
+
+CMakeFiles/cpp_sql_engine.dir/selectstatement.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpp_sql_engine.dir/selectstatement.cpp.s"
+	C:\Qt\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\asant\workspace\CLionProjects\cpp-sql-engine\selectstatement.cpp -o CMakeFiles\cpp_sql_engine.dir\selectstatement.cpp.s
+
+CMakeFiles/cpp_sql_engine.dir/dropstatement.cpp.obj: CMakeFiles/cpp_sql_engine.dir/flags.make
+CMakeFiles/cpp_sql_engine.dir/dropstatement.cpp.obj: CMakeFiles/cpp_sql_engine.dir/includes_CXX.rsp
+CMakeFiles/cpp_sql_engine.dir/dropstatement.cpp.obj: ../dropstatement.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\asant\workspace\CLionProjects\cpp-sql-engine\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/cpp_sql_engine.dir/dropstatement.cpp.obj"
+	C:\Qt\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cpp_sql_engine.dir\dropstatement.cpp.obj -c D:\asant\workspace\CLionProjects\cpp-sql-engine\dropstatement.cpp
+
+CMakeFiles/cpp_sql_engine.dir/dropstatement.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cpp_sql_engine.dir/dropstatement.cpp.i"
+	C:\Qt\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\asant\workspace\CLionProjects\cpp-sql-engine\dropstatement.cpp > CMakeFiles\cpp_sql_engine.dir\dropstatement.cpp.i
+
+CMakeFiles/cpp_sql_engine.dir/dropstatement.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpp_sql_engine.dir/dropstatement.cpp.s"
+	C:\Qt\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\asant\workspace\CLionProjects\cpp-sql-engine\dropstatement.cpp -o CMakeFiles\cpp_sql_engine.dir\dropstatement.cpp.s
+
 CMakeFiles/cpp_sql_engine.dir/parser.cpp.obj: CMakeFiles/cpp_sql_engine.dir/flags.make
 CMakeFiles/cpp_sql_engine.dir/parser.cpp.obj: CMakeFiles/cpp_sql_engine.dir/includes_CXX.rsp
 CMakeFiles/cpp_sql_engine.dir/parser.cpp.obj: ../parser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\asant\workspace\CLionProjects\cpp-sql-engine\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/cpp_sql_engine.dir/parser.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\asant\workspace\CLionProjects\cpp-sql-engine\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/cpp_sql_engine.dir/parser.cpp.obj"
 	C:\Qt\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cpp_sql_engine.dir\parser.cpp.obj -c D:\asant\workspace\CLionProjects\cpp-sql-engine\parser.cpp
 
 CMakeFiles/cpp_sql_engine.dir/parser.cpp.i: cmake_force
@@ -118,7 +174,7 @@ CMakeFiles/cpp_sql_engine.dir/lexer.cpp.obj: CMakeFiles/cpp_sql_engine.dir/flags
 CMakeFiles/cpp_sql_engine.dir/lexer.cpp.obj: CMakeFiles/cpp_sql_engine.dir/includes_CXX.rsp
 CMakeFiles/cpp_sql_engine.dir/lexer.cpp.obj: ../lexer.cpp
 CMakeFiles/cpp_sql_engine.dir/lexer.cpp.obj: ../parser.hpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\asant\workspace\CLionProjects\cpp-sql-engine\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/cpp_sql_engine.dir/lexer.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\asant\workspace\CLionProjects\cpp-sql-engine\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/cpp_sql_engine.dir/lexer.cpp.obj"
 	C:\Qt\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\cpp_sql_engine.dir\lexer.cpp.obj -c D:\asant\workspace\CLionProjects\cpp-sql-engine\lexer.cpp
 
 CMakeFiles/cpp_sql_engine.dir/lexer.cpp.i: cmake_force
@@ -132,6 +188,10 @@ CMakeFiles/cpp_sql_engine.dir/lexer.cpp.s: cmake_force
 # Object files for target cpp_sql_engine
 cpp_sql_engine_OBJECTS = \
 "CMakeFiles/cpp_sql_engine.dir/main.cpp.obj" \
+"CMakeFiles/cpp_sql_engine.dir/sqlstatement.cpp.obj" \
+"CMakeFiles/cpp_sql_engine.dir/createstatement.cpp.obj" \
+"CMakeFiles/cpp_sql_engine.dir/selectstatement.cpp.obj" \
+"CMakeFiles/cpp_sql_engine.dir/dropstatement.cpp.obj" \
 "CMakeFiles/cpp_sql_engine.dir/parser.cpp.obj" \
 "CMakeFiles/cpp_sql_engine.dir/lexer.cpp.obj"
 
@@ -139,13 +199,17 @@ cpp_sql_engine_OBJECTS = \
 cpp_sql_engine_EXTERNAL_OBJECTS =
 
 cpp_sql_engine.exe: CMakeFiles/cpp_sql_engine.dir/main.cpp.obj
+cpp_sql_engine.exe: CMakeFiles/cpp_sql_engine.dir/sqlstatement.cpp.obj
+cpp_sql_engine.exe: CMakeFiles/cpp_sql_engine.dir/createstatement.cpp.obj
+cpp_sql_engine.exe: CMakeFiles/cpp_sql_engine.dir/selectstatement.cpp.obj
+cpp_sql_engine.exe: CMakeFiles/cpp_sql_engine.dir/dropstatement.cpp.obj
 cpp_sql_engine.exe: CMakeFiles/cpp_sql_engine.dir/parser.cpp.obj
 cpp_sql_engine.exe: CMakeFiles/cpp_sql_engine.dir/lexer.cpp.obj
 cpp_sql_engine.exe: CMakeFiles/cpp_sql_engine.dir/build.make
 cpp_sql_engine.exe: CMakeFiles/cpp_sql_engine.dir/linklibs.rsp
 cpp_sql_engine.exe: CMakeFiles/cpp_sql_engine.dir/objects1.rsp
 cpp_sql_engine.exe: CMakeFiles/cpp_sql_engine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\asant\workspace\CLionProjects\cpp-sql-engine\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable cpp_sql_engine.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\asant\workspace\CLionProjects\cpp-sql-engine\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable cpp_sql_engine.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\cpp_sql_engine.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

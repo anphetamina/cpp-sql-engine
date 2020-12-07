@@ -70,11 +70,14 @@
 #line 1 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
 
 #include <cstdio>
+#include <exception>
+
 extern int yylineno;
 extern int yylex();
 void yyerror(const char*);
 
-#line 78 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+
+#line 81 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
 
 # ifndef YY_CAST
 #  ifdef __cplusplus
@@ -160,30 +163,30 @@ enum yysymbol_kind_t
   YYSYMBOL_TEXT_TYPE = 55,                 /* TEXT_TYPE  */
   YYSYMBOL_HOUR_TYPE = 56,                 /* HOUR_TYPE  */
   YYSYMBOL_YYACCEPT = 57,                  /* $accept  */
-  YYSYMBOL_create_stmt = 58,               /* create_stmt  */
-  YYSYMBOL_create_stmt_list = 59,          /* create_stmt_list  */
-  YYSYMBOL_create_stmt_var = 60,           /* create_stmt_var  */
-  YYSYMBOL_fk_stmt_list = 61,              /* fk_stmt_list  */
-  YYSYMBOL_insert_stmt = 62,               /* insert_stmt  */
-  YYSYMBOL_select_stmt = 63,               /* select_stmt  */
-  YYSYMBOL_update_stmt = 64,               /* update_stmt  */
-  YYSYMBOL_set_stmt_list = 65,             /* set_stmt_list  */
-  YYSYMBOL_delete_stmt = 66,               /* delete_stmt  */
-  YYSYMBOL_truncate_stmt = 67,             /* truncate_stmt  */
-  YYSYMBOL_drop_stmt = 68,                 /* drop_stmt  */
-  YYSYMBOL_quit_stmt = 69,                 /* quit_stmt  */
-  YYSYMBOL_order_expr = 70,                /* order_expr  */
-  YYSYMBOL_expr_list = 71,                 /* expr_list  */
-  YYSYMBOL_expr = 72,                      /* expr  */
-  YYSYMBOL_name_list = 73,                 /* name_list  */
-  YYSYMBOL_value_list = 74,                /* value_list  */
-  YYSYMBOL_value_var = 75,                 /* value_var  */
-  YYSYMBOL_type = 76,                      /* type  */
-  YYSYMBOL_opt_where = 77,                 /* opt_where  */
-  YYSYMBOL_opt_order = 78,                 /* opt_order  */
-  YYSYMBOL_opt_fk = 79,                    /* opt_fk  */
-  YYSYMBOL_sql_stmt_list = 80,             /* sql_stmt_list  */
-  YYSYMBOL_sql_stmt = 81                   /* sql_stmt  */
+  YYSYMBOL_create_stmt_list = 58,          /* create_stmt_list  */
+  YYSYMBOL_create_stmt_var = 59,           /* create_stmt_var  */
+  YYSYMBOL_fk_stmt_list = 60,              /* fk_stmt_list  */
+  YYSYMBOL_set_stmt_list = 61,             /* set_stmt_list  */
+  YYSYMBOL_order_expr = 62,                /* order_expr  */
+  YYSYMBOL_expr_list = 63,                 /* expr_list  */
+  YYSYMBOL_expr = 64,                      /* expr  */
+  YYSYMBOL_name_list = 65,                 /* name_list  */
+  YYSYMBOL_value_list = 66,                /* value_list  */
+  YYSYMBOL_value_var = 67,                 /* value_var  */
+  YYSYMBOL_col_type = 68,                  /* col_type  */
+  YYSYMBOL_opt_where = 69,                 /* opt_where  */
+  YYSYMBOL_opt_order = 70,                 /* opt_order  */
+  YYSYMBOL_opt_fk = 71,                    /* opt_fk  */
+  YYSYMBOL_prog = 72,                      /* prog  */
+  YYSYMBOL_sql_stmt = 73,                  /* sql_stmt  */
+  YYSYMBOL_create_stmt = 74,               /* create_stmt  */
+  YYSYMBOL_insert_stmt = 75,               /* insert_stmt  */
+  YYSYMBOL_select_stmt = 76,               /* select_stmt  */
+  YYSYMBOL_delete_stmt = 77,               /* delete_stmt  */
+  YYSYMBOL_update_stmt = 78,               /* update_stmt  */
+  YYSYMBOL_truncate_stmt = 79,             /* truncate_stmt  */
+  YYSYMBOL_drop_stmt = 80,                 /* drop_stmt  */
+  YYSYMBOL_quit_stmt = 81                  /* quit_stmt  */
 };
 typedef enum yysymbol_kind_t yysymbol_kind_t;
 
@@ -560,13 +563,13 @@ static const yytype_int8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    55,    55,    55,    58,    58,    58,    58,    58,    58,
-      58,    58,    61,    64,    64,    68,    69,    72,    72,    75,
-      75,    75,    78,    82,    83,    86,    86,    89,    89,    93,
-      94,    95,    98,   101,   104,   104,   108,   109,   110,   114,
-     115,   116,   117,   118,   119,   120,   121,   122,   123,   124,
-     127,   130,   133,   136,   136,   139,   139,   142,   142,   142,
-     142,   142,   145,   145,   145,   145,   145,   145
+       0,    72,    72,    82,    94,    95,    96,    97,    98,    99,
+     100,   101,   104,   110,   110,   114,   115,   118,   118,   121,
+     121,   121,   124,   131,   135,   141,   141,   144,   144,   148,
+     149,   150,   153,   159,   166,   166,   170,   171,   172,   176,
+     177,   178,   179,   180,   181,   182,   183,   184,   185,   186,
+     189,   195,   201,   207,   207,   210,   210,   213,   213,   213,
+     213,   213,   216,   216,   216,   216,   216,   216
 };
 #endif
 
@@ -590,12 +593,12 @@ yysymbol_name (yysymbol_kind_t yysymbol)
   "ORDER", "INTO", "WHERE", "DESC", "ASC", "DROP", "FROM", "LIKE", "ANDOP",
   "KEY", "NOT", "NOT_NULL", "SET", "AS", "BY", "TRUNCATE", "QUIT",
   "AUTO_INCREMENT", "FOREIGN", "INT_TYPE", "FLOAT_TYPE", "DATE_TYPE",
-  "CHAR_TYPE", "TEXT_TYPE", "HOUR_TYPE", "$accept", "create_stmt",
-  "create_stmt_list", "create_stmt_var", "fk_stmt_list", "insert_stmt",
-  "select_stmt", "update_stmt", "set_stmt_list", "delete_stmt",
-  "truncate_stmt", "drop_stmt", "quit_stmt", "order_expr", "expr_list",
-  "expr", "name_list", "value_list", "value_var", "type", "opt_where",
-  "opt_order", "opt_fk", "sql_stmt_list", "sql_stmt", YY_NULLPTR
+  "CHAR_TYPE", "TEXT_TYPE", "HOUR_TYPE", "$accept", "create_stmt_list",
+  "create_stmt_var", "fk_stmt_list", "set_stmt_list", "order_expr",
+  "expr_list", "expr", "name_list", "value_list", "value_var", "col_type",
+  "opt_where", "opt_order", "opt_fk", "prog", "sql_stmt", "create_stmt",
+  "insert_stmt", "select_stmt", "delete_stmt", "update_stmt",
+  "truncate_stmt", "drop_stmt", "quit_stmt", YY_NULLPTR
   };
   return yy_sname[yysymbol];
 }
@@ -629,8 +632,8 @@ static const yytype_int16 yytoknum[] =
      STATE-NUM.  */
 static const yytype_int16 yypact[] =
 {
-      54,   -12,     4,   -16,    72,    39,    21,    48,    42,   -68,
-     -68,   -68,   -68,   -68,   -68,   -68,   -68,     8,   -68,    59,
+      54,   -12,     4,   -16,    72,    39,    21,    48,    42,     8,
+     -68,   -68,   -68,   -68,   -68,   -68,   -68,   -68,   -68,    59,
       80,    81,   -68,    62,     2,    51,   103,   110,   -68,   -68,
      -68,   104,    83,   106,   114,   115,   114,   116,   107,   108,
      119,    -1,   114,    -3,   -68,    -3,   109,     5,   -68,   -68,
@@ -653,10 +656,10 @@ static const yytype_int16 yypact[] =
      means the default is an error.  */
 static const yytype_int8 yydefact[] =
 {
-       0,     0,     0,     0,     0,     0,     0,     0,     0,     4,
-       5,     6,     7,     8,     9,    10,    11,     0,     3,     0,
+       0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+       2,     4,     5,     6,     8,     7,     9,    10,    11,     0,
        0,     0,    54,     0,     0,     0,     0,     0,    52,     1,
-       2,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+       3,     0,     0,     0,     0,     0,     0,     0,     0,     0,
        0,     0,     0,    27,    53,    27,     0,     0,    51,    50,
        0,     0,    18,    58,    59,    48,    57,    60,    61,     0,
        0,    38,    49,     0,     0,    25,    25,     0,     0,     0,
@@ -675,17 +678,17 @@ static const yytype_int8 yydefact[] =
   /* YYPGOTO[NTERM-NUM].  */
 static const yytype_int16 yypgoto[] =
 {
-     -68,   -68,   -68,    91,   -68,   -68,   -68,   -68,   -68,   -68,
-     -68,   -68,   -68,   -68,   -21,   -58,   -24,   -68,   -67,   -68,
-     126,   121,   -68,   -68,   153
+     -68,   -68,    91,   -68,   -68,   -68,   -21,   -58,   -24,   -68,
+     -67,   -68,   126,   121,   -68,   -68,   161,   -68,   -68,   -68,
+     -68,   -68,   -68,   -68,   -68
 };
 
   /* YYDEFGOTO[NTERM-NUM].  */
 static const yytype_int16 yydefgoto[] =
 {
-      -1,     9,    51,    52,   139,    10,    11,    12,    47,    13,
-      14,    15,    16,    93,    60,    61,    24,   126,    62,    76,
-      65,    94,   137,    17,    18
+      -1,    51,    52,   139,    47,    93,    60,    61,    24,   126,
+      62,    76,    65,    94,   137,     9,    10,    11,    12,    13,
+      14,    15,    16,    17,    18
 };
 
   /* YYTABLE[YYPACT[STATE-NUM]] -- What to do in state STATE-NUM.  If
@@ -733,7 +736,7 @@ static const yytype_int16 yycheck[] =
       12,     5,    13,    50,    13,    15,    14,    14,     5,    12,
       15,    50,    13,    41,    41,     5,    12,     5,    13,    12,
        5,     5,    13,    12,    26,     5,    26,    13,    77,    -1,
-      17,    45,    -1,    -1,    -1,    -1,    -1,    -1,    -1,    -1,
+       9,    45,    -1,    -1,    -1,    -1,    -1,    -1,    -1,    -1,
       -1,    -1,    -1,    -1,    -1,    -1,    -1,    66
 };
 
@@ -741,20 +744,20 @@ static const yytype_int16 yycheck[] =
      symbol of state STATE-NUM.  */
 static const yytype_int8 yystos[] =
 {
-       0,    24,    27,    28,    29,    30,    37,    47,    48,    58,
-      62,    63,    64,    66,    67,    68,    69,    80,    81,    25,
-      38,    33,     5,    16,    73,     5,    25,    25,    15,     0,
-      81,     5,     5,     5,    38,    14,    38,    44,     5,     5,
-      12,    34,    12,    73,     5,    73,     5,    65,    15,    15,
-       5,    59,    60,     3,     4,     5,     6,     7,     8,    42,
-      71,    72,    75,    73,    34,    77,    77,    17,    14,    34,
-      51,    52,    53,    54,    55,    56,    76,    14,    72,    15,
+       0,    24,    27,    28,    29,    30,    37,    47,    48,    72,
+      73,    74,    75,    76,    77,    78,    79,    80,    81,    25,
+      38,    33,     5,    16,    65,     5,    25,    25,    15,     0,
+      73,     5,     5,     5,    38,    14,    38,    44,     5,     5,
+      12,    34,    12,    65,     5,    65,     5,    61,    15,    15,
+       5,    58,    59,     3,     4,     5,     6,     7,     8,    42,
+      63,    64,    67,    65,    34,    69,    69,    17,    14,    34,
+      51,    52,    53,    54,    55,    56,    68,    14,    64,    15,
       21,    40,     9,    10,    11,    17,    18,    19,    22,    39,
-      13,    71,    32,    70,    78,    78,    75,     5,    71,    43,
-      23,    60,    72,    72,    72,    72,    72,    72,    72,    72,
-      72,     6,    31,    46,    15,    15,    17,    15,    49,    41,
-      20,    12,     5,    75,    12,    72,    74,    75,    35,    36,
-       5,    13,    14,    13,    15,    75,    14,    79,    50,    61,
+      13,    63,    32,    62,    70,    70,    67,     5,    63,    43,
+      23,    59,    64,    64,    64,    64,    64,    64,    64,    64,
+      64,     6,    31,    46,    15,    15,    17,    15,    49,    41,
+      20,    12,     5,    67,    12,    64,    66,    67,    35,    36,
+       5,    13,    14,    13,    15,    67,    14,    71,    50,    60,
       13,    41,    14,    15,    12,    50,     5,    41,    13,    12,
       26,     5,     5,    13,    12,    26,     5,     5,    13,    12,
        5,    13
@@ -763,19 +766,19 @@ static const yytype_int8 yystos[] =
   /* YYR1[YYN] -- Symbol number of symbol that rule YYN derives.  */
 static const yytype_int8 yyr1[] =
 {
-       0,    57,    80,    80,    81,    81,    81,    81,    81,    81,
-      81,    81,    58,    79,    79,    61,    61,    59,    59,    60,
-      60,    60,    62,    63,    63,    78,    78,    77,    77,    70,
-      70,    70,    66,    64,    65,    65,    71,    71,    71,    72,
-      72,    72,    72,    72,    72,    72,    72,    72,    72,    72,
-      67,    68,    69,    73,    73,    74,    74,    75,    75,    75,
-      75,    75,    76,    76,    76,    76,    76,    76
+       0,    57,    72,    72,    73,    73,    73,    73,    73,    73,
+      73,    73,    74,    71,    71,    60,    60,    58,    58,    59,
+      59,    59,    75,    76,    76,    70,    70,    69,    69,    62,
+      62,    62,    77,    78,    61,    61,    63,    63,    63,    64,
+      64,    64,    64,    64,    64,    64,    64,    64,    64,    64,
+      79,    80,    81,    65,    65,    66,    66,    67,    67,    67,
+      67,    67,    68,    68,    68,    68,    68,    68
 };
 
   /* YYR2[YYN] -- Number of symbols on the right hand side of rule YYN.  */
 static const yytype_int8 yyr2[] =
 {
-       0,     2,     2,     1,     1,     1,     1,     1,     1,     1,
+       0,     2,     1,     2,     1,     1,     1,     1,     1,     1,
        1,     1,    14,     0,     2,    12,    10,     3,     1,     2,
        3,     4,    11,     7,     7,     0,     1,     0,     2,     3,
        4,     4,     6,     7,     5,     3,     3,     3,     1,     3,
@@ -1565,8 +1568,155 @@ yyreduce:
   YY_REDUCE_PRINT (yyn);
   switch (yyn)
     {
+  case 2: /* prog: sql_stmt  */
+#line 73 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+{
+  try {
+    (yyvsp[0].stmt_t)->execute();
+  } catch(const std::exception& e) {
+    std::cout << "exception" << std::endl;
+    e.what();
+  };
+  
+}
+#line 1583 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+    break;
 
-#line 1570 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+  case 3: /* prog: prog sql_stmt  */
+#line 83 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+{
+  try {
+    (yyvsp[0].stmt_t)->execute();
+  } catch(const std::exception& e) {
+    std::cout << "exception" << std::endl;
+    e.what();
+  };
+}
+#line 1596 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+    break;
+
+  case 4: /* sql_stmt: create_stmt  */
+#line 94 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+            { (yyval.stmt_t) = (yyvsp[0].create_t); }
+#line 1602 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+    break;
+
+  case 5: /* sql_stmt: insert_stmt  */
+#line 95 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+              { (yyval.stmt_t) = (yyvsp[0].select_t); }
+#line 1608 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+    break;
+
+  case 6: /* sql_stmt: select_stmt  */
+#line 96 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+              { (yyval.stmt_t) = (yyvsp[0].select_t); }
+#line 1614 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+    break;
+
+  case 7: /* sql_stmt: update_stmt  */
+#line 97 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+              { (yyval.stmt_t) = (yyvsp[0].select_t); }
+#line 1620 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+    break;
+
+  case 8: /* sql_stmt: delete_stmt  */
+#line 98 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+              { (yyval.stmt_t) = (yyvsp[0].select_t); }
+#line 1626 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+    break;
+
+  case 9: /* sql_stmt: truncate_stmt  */
+#line 99 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+                { (yyval.stmt_t) = (yyvsp[0].select_t); }
+#line 1632 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+    break;
+
+  case 10: /* sql_stmt: drop_stmt  */
+#line 100 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+            { (yyval.stmt_t) = (yyvsp[0].drop_t); }
+#line 1638 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+    break;
+
+  case 11: /* sql_stmt: quit_stmt  */
+#line 101 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+            { (yyval.stmt_t) = (yyvsp[0].select_t); }
+#line 1644 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+    break;
+
+  case 12: /* create_stmt: CREATE TABLE NAME RO create_stmt_list C PRIMARY KEY RO NAME RC opt_fk RC CM  */
+#line 105 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+{
+  (yyval.create_t) = new CreateStatement();
+}
+#line 1652 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+    break;
+
+  case 22: /* insert_stmt: INSERT INTO NAME RO name_list RC VALUES RO value_list RC CM  */
+#line 125 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+{
+  (yyval.select_t) = new SelectStatement();
+}
+#line 1660 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+    break;
+
+  case 23: /* select_stmt: SELECT S FROM name_list opt_where opt_order CM  */
+#line 132 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+{
+  (yyval.select_t) = new SelectStatement();
+}
+#line 1668 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+    break;
+
+  case 24: /* select_stmt: SELECT name_list FROM name_list opt_where opt_order CM  */
+#line 136 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+{
+  (yyval.select_t) = new SelectStatement();
+}
+#line 1676 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+    break;
+
+  case 32: /* delete_stmt: DELETE FROM NAME WHERE expr_list CM  */
+#line 154 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+{
+  (yyval.select_t) = new SelectStatement();
+}
+#line 1684 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+    break;
+
+  case 33: /* update_stmt: UPDATE NAME SET set_stmt_list WHERE expr_list CM  */
+#line 160 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+{
+  (yyval.select_t) = new SelectStatement();
+}
+#line 1692 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+    break;
+
+  case 50: /* truncate_stmt: TRUNCATE TABLE NAME CM  */
+#line 190 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+{
+  (yyval.select_t) = new SelectStatement();
+}
+#line 1700 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+    break;
+
+  case 51: /* drop_stmt: DROP TABLE NAME CM  */
+#line 196 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+{
+  (yyval.drop_t) = new DropStatement();
+}
+#line 1708 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+    break;
+
+  case 52: /* quit_stmt: QUIT CM  */
+#line 202 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+{
+  (yyval.select_t) = new SelectStatement();
+}
+#line 1716 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
+    break;
+
+
+#line 1720 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
 
       default: break;
     }
@@ -1796,9 +1946,10 @@ yyreturn:
   return yyresult;
 }
 
-#line 149 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+#line 220 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
 
 
 void yyerror(const char* err) {
-  printf("SYNTAX ERROR [%d:%d]\n%s", yylloc.first_line, yylloc.first_column, err);
+  // printf("SYNTAX ERROR [%d:%d]\n%s\n", yylloc.first_line, yylloc.first_column, err);
+  printf("%s\n", err);
 }

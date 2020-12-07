@@ -1,15 +1,19 @@
 #include <cstdio>
-#include <exception>
 #include "parser.hpp"
 
 extern FILE *yyin;
 
 int main(int argc, char **argv) {
 
-    yyin = fopen("../inputfile.txt", "r");
+    yyin = fopen("../input.txt", "r");
     if (!yyin) {
         return -1;
-    } else {
-        return yyparse();
     }
+    
+    return yyparse();
+
+
+    /* while (yyparse() < 2);
+    
+    return 0; */
 }

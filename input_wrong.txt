@@ -1,0 +1,54 @@
+create table nazioni ( id int not null auto_increment , nome text not null , annotazioni text , primary key (id) );
+create table studenti ( nome text not null , cognome text not null , id int not null auto_increment , matricola int not null , nazione int , nascita date , tempo time , media float , crediti int , primary key ( id ) , foreign key (nazione) references nazioni (id) );
+
+insert into nazioni ( nome , annotazioni ) values ("italia" , "1000 posti disponibli" );
+insert into nazioni ( nome , annotazioni ) values ("india" , "250 posti disponibli" );
+insert into nazioni ( nome , annotazion
+insert into nazioni ( nome , annotazioni ) values ("bangladesh" , "100 posti disponibli" );
+insert into
+insert into studenti ( nome , cognome, matricola , nazione , nascita , tempo , media , crediti ) values ( "xian" , "wu" , 256655 , 3 , 30/10/1935 , 10.02.16 , 24.3 , 160 );
+
+select * from nazioni;
+select * from studenti;
+select * from studenti order by media asc;
+select * from studenti order by crediti desc;
+select * from studenti where nome = "carlo";
+select * from studenti where nome <> "carlo";
+select * from studenti where nome >= "carlo";
+select * from studenti where nazione >= 3;
+select * from studenti where nascita > "03/12/1993";
+select * from studenti where tempo < "18.00.00";
+select * from studenti where media between 25 and 30;
+select * from studenti order by cognome asc;
+select * from studenti order by tempo desc;
+select * from stude >= 4 order by nome desc;
+select * from studenti where matricola between 232422 and 243343 order by id asc;
+select * from studenti where matricola between 232422 and 243343 order by tempo desc;
+select * from studenti where nome like "%o";
+select * from studenti where nome like "g%";
+select * from studenti where not nome like "g%";
+select * from studenti where cognome like "p%";
+select * from studenti where cognome like "%i";
+select * from studenti where nome like "%simo__";
+select * from st studenti where media < 27;
+select nome,cognome,media,id,matricola,tempo from studenti order by nome asc;
+select nome,cognome,media,id,matricola,tempo from studenti order by tempo asc;
+select nome,cognome,media,id,nasc<= 3 order by media asc;
+select nome,cognome,media,id,matricola,crediti from studenti where media between 18 and 27 order by crediti desc;
+select nome,cognome,media,id,matricola,crediti from studenti where crediti between 10 and 120 order by cognome asc;
+select nome,cognome,media,id,matricola,tempo from studenti where media > 18 and media < 22 or nome = "carlo" or cognome = "verdini";
+select nome,cognome,media,id,matricola,crediti from studenti where crediti > 120 and media > 24 or nome = "giulia" or cognome = "verdini"; 
+select nome,cognome,media,id,crediti,tempo,nascita from studenti where nascita < "12/02/1994" and tempo <= "18.00.00" or nome = "elisa" or crediti > 160;
+select nome,cognome,media,id,crediti,tempo,nascita from studenti where nascita < "12/02/1994" and tempo <= "18.00.00" or nome = "elisa" or not crediti > 160;;;;;;;;;;;;;;;;;;
+
+update studenti set media = 28 where nome = "giulia";]]]]]]]o >= "22.00.00";
+
+delete from studenti where nome = "giorgio";
+select * from studenti;
+delete from studenti where id >= 14;
+select * from studenti;
+delete from studenti where crediti >= 10 and crediti < 50 or media > 30;
+select * from studenti;
+delete from studenti where tempo > 10.00.00 and tempo < 14.00.00 or cognome = "Escobar";
+select * from ]
+quit;

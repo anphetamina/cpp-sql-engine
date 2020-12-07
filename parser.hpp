@@ -44,6 +44,12 @@
 #if YYDEBUG
 extern int yydebug;
 #endif
+/* "%code requires" blocks.  */
+#line 11 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+ 
+  #include "parser_types.h"
+
+#line 53 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.hpp"
 
 /* Token kinds.  */
 #ifndef YYTOKENTYPE
@@ -114,7 +120,19 @@ extern int yydebug;
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-typedef int YYSTYPE;
+union YYSTYPE
+{
+#line 18 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.y"
+
+  SqlStatement* stmt_t;
+  CreateStatement* create_t;
+  SelectStatement* select_t;
+  DropStatement* drop_t;
+
+#line 133 "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.hpp"
+
+};
+typedef union YYSTYPE YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1
 #endif

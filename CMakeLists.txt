@@ -13,7 +13,7 @@ FLEX_TARGET(lexer lexer.l ${CMAKE_SOURCE_DIR}/lexer.cpp)
 ADD_FLEX_BISON_DEPENDENCY(lexer parser)
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
-add_executable(${project_name} main.cpp ${BISON_parser_OUTPUTS} ${FLEX_lexer_OUTPUTS})
+add_executable(${project_name} main.cpp parser_types.h sqlstatement.h sqlstatement.cpp createstatement.h createstatement.cpp selectstatement.h selectstatement.cpp dropstatement.h dropstatement.cpp ${BISON_parser_OUTPUTS} ${FLEX_lexer_OUTPUTS})
 
 #target_include_directories(${project_name} PRIVATE "${CMAKE_CURRENT_BINARY_DIR}")
 #target_link_libraries(${project_name} ${FLEX_LIBRARIES})

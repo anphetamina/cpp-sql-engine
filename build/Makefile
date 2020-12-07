@@ -141,6 +141,60 @@ cpp_sql_engine/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp_sql_engine.dir\build.make CMakeFiles/cpp_sql_engine.dir/build
 .PHONY : cpp_sql_engine/fast
 
+createstatement.obj: createstatement.cpp.obj
+
+.PHONY : createstatement.obj
+
+# target to build an object file
+createstatement.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp_sql_engine.dir\build.make CMakeFiles/cpp_sql_engine.dir/createstatement.cpp.obj
+.PHONY : createstatement.cpp.obj
+
+createstatement.i: createstatement.cpp.i
+
+.PHONY : createstatement.i
+
+# target to preprocess a source file
+createstatement.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp_sql_engine.dir\build.make CMakeFiles/cpp_sql_engine.dir/createstatement.cpp.i
+.PHONY : createstatement.cpp.i
+
+createstatement.s: createstatement.cpp.s
+
+.PHONY : createstatement.s
+
+# target to generate assembly for a file
+createstatement.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp_sql_engine.dir\build.make CMakeFiles/cpp_sql_engine.dir/createstatement.cpp.s
+.PHONY : createstatement.cpp.s
+
+dropstatement.obj: dropstatement.cpp.obj
+
+.PHONY : dropstatement.obj
+
+# target to build an object file
+dropstatement.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp_sql_engine.dir\build.make CMakeFiles/cpp_sql_engine.dir/dropstatement.cpp.obj
+.PHONY : dropstatement.cpp.obj
+
+dropstatement.i: dropstatement.cpp.i
+
+.PHONY : dropstatement.i
+
+# target to preprocess a source file
+dropstatement.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp_sql_engine.dir\build.make CMakeFiles/cpp_sql_engine.dir/dropstatement.cpp.i
+.PHONY : dropstatement.cpp.i
+
+dropstatement.s: dropstatement.cpp.s
+
+.PHONY : dropstatement.s
+
+# target to generate assembly for a file
+dropstatement.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp_sql_engine.dir\build.make CMakeFiles/cpp_sql_engine.dir/dropstatement.cpp.s
+.PHONY : dropstatement.cpp.s
+
 lexer.obj: lexer.cpp.obj
 
 .PHONY : lexer.obj
@@ -222,6 +276,60 @@ parser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp_sql_engine.dir\build.make CMakeFiles/cpp_sql_engine.dir/parser.cpp.s
 .PHONY : parser.cpp.s
 
+selectstatement.obj: selectstatement.cpp.obj
+
+.PHONY : selectstatement.obj
+
+# target to build an object file
+selectstatement.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp_sql_engine.dir\build.make CMakeFiles/cpp_sql_engine.dir/selectstatement.cpp.obj
+.PHONY : selectstatement.cpp.obj
+
+selectstatement.i: selectstatement.cpp.i
+
+.PHONY : selectstatement.i
+
+# target to preprocess a source file
+selectstatement.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp_sql_engine.dir\build.make CMakeFiles/cpp_sql_engine.dir/selectstatement.cpp.i
+.PHONY : selectstatement.cpp.i
+
+selectstatement.s: selectstatement.cpp.s
+
+.PHONY : selectstatement.s
+
+# target to generate assembly for a file
+selectstatement.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp_sql_engine.dir\build.make CMakeFiles/cpp_sql_engine.dir/selectstatement.cpp.s
+.PHONY : selectstatement.cpp.s
+
+sqlstatement.obj: sqlstatement.cpp.obj
+
+.PHONY : sqlstatement.obj
+
+# target to build an object file
+sqlstatement.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp_sql_engine.dir\build.make CMakeFiles/cpp_sql_engine.dir/sqlstatement.cpp.obj
+.PHONY : sqlstatement.cpp.obj
+
+sqlstatement.i: sqlstatement.cpp.i
+
+.PHONY : sqlstatement.i
+
+# target to preprocess a source file
+sqlstatement.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp_sql_engine.dir\build.make CMakeFiles/cpp_sql_engine.dir/sqlstatement.cpp.i
+.PHONY : sqlstatement.cpp.i
+
+sqlstatement.s: sqlstatement.cpp.s
+
+.PHONY : sqlstatement.s
+
+# target to generate assembly for a file
+sqlstatement.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp_sql_engine.dir\build.make CMakeFiles/cpp_sql_engine.dir/sqlstatement.cpp.s
+.PHONY : sqlstatement.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -231,6 +339,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... cpp_sql_engine
+	@echo ... createstatement.obj
+	@echo ... createstatement.i
+	@echo ... createstatement.s
+	@echo ... dropstatement.obj
+	@echo ... dropstatement.i
+	@echo ... dropstatement.s
 	@echo ... lexer.obj
 	@echo ... lexer.i
 	@echo ... lexer.s
@@ -240,6 +354,12 @@ help:
 	@echo ... parser.obj
 	@echo ... parser.i
 	@echo ... parser.s
+	@echo ... selectstatement.obj
+	@echo ... selectstatement.i
+	@echo ... selectstatement.s
+	@echo ... sqlstatement.obj
+	@echo ... sqlstatement.i
+	@echo ... sqlstatement.s
 .PHONY : help
 
 

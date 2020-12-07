@@ -6,6 +6,26 @@
 },
 {
   "directory": "D:/asant/workspace/CLionProjects/cpp-sql-engine/build",
+  "command": "C:\\Qt\\Tools\\mingw810_64\\bin\\g++.exe  @CMakeFiles/cpp_sql_engine.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\cpp_sql_engine.dir\\sqlstatement.cpp.obj -c D:\\asant\\workspace\\CLionProjects\\cpp-sql-engine\\sqlstatement.cpp",
+  "file": "D:/asant/workspace/CLionProjects/cpp-sql-engine/sqlstatement.cpp"
+},
+{
+  "directory": "D:/asant/workspace/CLionProjects/cpp-sql-engine/build",
+  "command": "C:\\Qt\\Tools\\mingw810_64\\bin\\g++.exe  @CMakeFiles/cpp_sql_engine.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\cpp_sql_engine.dir\\createstatement.cpp.obj -c D:\\asant\\workspace\\CLionProjects\\cpp-sql-engine\\createstatement.cpp",
+  "file": "D:/asant/workspace/CLionProjects/cpp-sql-engine/createstatement.cpp"
+},
+{
+  "directory": "D:/asant/workspace/CLionProjects/cpp-sql-engine/build",
+  "command": "C:\\Qt\\Tools\\mingw810_64\\bin\\g++.exe  @CMakeFiles/cpp_sql_engine.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\cpp_sql_engine.dir\\selectstatement.cpp.obj -c D:\\asant\\workspace\\CLionProjects\\cpp-sql-engine\\selectstatement.cpp",
+  "file": "D:/asant/workspace/CLionProjects/cpp-sql-engine/selectstatement.cpp"
+},
+{
+  "directory": "D:/asant/workspace/CLionProjects/cpp-sql-engine/build",
+  "command": "C:\\Qt\\Tools\\mingw810_64\\bin\\g++.exe  @CMakeFiles/cpp_sql_engine.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\cpp_sql_engine.dir\\dropstatement.cpp.obj -c D:\\asant\\workspace\\CLionProjects\\cpp-sql-engine\\dropstatement.cpp",
+  "file": "D:/asant/workspace/CLionProjects/cpp-sql-engine/dropstatement.cpp"
+},
+{
+  "directory": "D:/asant/workspace/CLionProjects/cpp-sql-engine/build",
   "command": "C:\\Qt\\Tools\\mingw810_64\\bin\\g++.exe  @CMakeFiles/cpp_sql_engine.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\cpp_sql_engine.dir\\parser.cpp.obj -c D:\\asant\\workspace\\CLionProjects\\cpp-sql-engine\\parser.cpp",
   "file": "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp"
 },

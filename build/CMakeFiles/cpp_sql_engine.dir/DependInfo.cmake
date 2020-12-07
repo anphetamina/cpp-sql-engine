@@ -4,9 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "D:/asant/workspace/CLionProjects/cpp-sql-engine/createstatement.cpp" "D:/asant/workspace/CLionProjects/cpp-sql-engine/build/CMakeFiles/cpp_sql_engine.dir/createstatement.cpp.obj"
+  "D:/asant/workspace/CLionProjects/cpp-sql-engine/dropstatement.cpp" "D:/asant/workspace/CLionProjects/cpp-sql-engine/build/CMakeFiles/cpp_sql_engine.dir/dropstatement.cpp.obj"
   "D:/asant/workspace/CLionProjects/cpp-sql-engine/lexer.cpp" "D:/asant/workspace/CLionProjects/cpp-sql-engine/build/CMakeFiles/cpp_sql_engine.dir/lexer.cpp.obj"
   "D:/asant/workspace/CLionProjects/cpp-sql-engine/main.cpp" "D:/asant/workspace/CLionProjects/cpp-sql-engine/build/CMakeFiles/cpp_sql_engine.dir/main.cpp.obj"
   "D:/asant/workspace/CLionProjects/cpp-sql-engine/parser.cpp" "D:/asant/workspace/CLionProjects/cpp-sql-engine/build/CMakeFiles/cpp_sql_engine.dir/parser.cpp.obj"
+  "D:/asant/workspace/CLionProjects/cpp-sql-engine/selectstatement.cpp" "D:/asant/workspace/CLionProjects/cpp-sql-engine/build/CMakeFiles/cpp_sql_engine.dir/selectstatement.cpp.obj"
+  "D:/asant/workspace/CLionProjects/cpp-sql-engine/sqlstatement.cpp" "D:/asant/workspace/CLionProjects/cpp-sql-engine/build/CMakeFiles/cpp_sql_engine.dir/sqlstatement.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
